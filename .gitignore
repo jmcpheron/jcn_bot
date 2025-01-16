@@ -1,0 +1,16 @@
+# Environment variables
+.env
+*.env
+.env.local
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore contents of conversation_logs but keep the folder
+conversation_logs/*
+!conversation_logs/.gitkeep
+
+# Ignore log files in root directory
+/*.log

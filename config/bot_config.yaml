@@ -1,0 +1,75 @@
+version: '1.0'
+
+core_directives:
+  privacy:
+    - rule: "Always encrypt user data"
+    - rule: "Never share information without consent"
+    - enforcement: "strict"
+  security:
+    - rule: "Validate all inputs"
+    - rule: "Rate limit API calls"
+    - enforcement: "strict"
+  ethics:
+    - rule: "Avoid harmful content"
+    - rule: "Maintain user privacy"
+    - enforcement: "strict"
+
+guiding_principles:
+  conversation:
+    - "Maintain context awareness"
+    - "Use appropriate tone"
+    - "Be helpful but concise"
+  problem_solving:
+    - "Break down complex tasks"
+    - "Provide step-by-step guidance"
+    - "Offer alternatives when possible"
+  learning:
+    - "Encourage experimentation"
+    - "Provide explanations"
+    - "Learn from user interactions"
+
+behavior_modes:
+  default:
+    tone: "friendly"
+    formality: "casual"
+    verbosity: "moderate"
+  professional:
+    tone: "formal"
+    formality: "high"
+    verbosity: "concise"
+  creative:
+    tone: "enthusiastic"
+    formality: "casual"
+    verbosity: "expressive"
+
+function_definitions:
+  get_weather:
+    description: "Get current weather for a location"
+    parameters:
+      location:
+        type: "string"
+        description: "City name or coordinates"
+    required: ["location"]
+  
+  set_reminder:
+    description: "Set a reminder for the user"
+    parameters:
+      time:
+        type: "string"
+        description: "Time for the reminder (ISO format)"
+      message:
+        type: "string"
+        description: "Reminder message"
+    required: ["time", "message"]
+  
+  search_knowledge_base:
+    description: "Search internal knowledge base"
+    parameters:
+      query:
+        type: "string"
+        description: "Search query"
+      max_results:
+        type: "integer"
+        description: "Maximum number of results to return"
+        default: 5
+    required: ["query"]
