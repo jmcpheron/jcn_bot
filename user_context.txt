@@ -7,3 +7,4 @@ PERFERED_CRYPTO_TOKEN:["USDC - Base", "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA0291
 PERFERED_CRYPTO_NETWORKS:["Base"]
 SEEKING:"the latent design space of web3 public goods funding and onchain capital allocation"
 GITHUB:https://github.com/jmcpheron/jcn_bot/
+BLOCK_EXPLORER:https://basescan.org/
