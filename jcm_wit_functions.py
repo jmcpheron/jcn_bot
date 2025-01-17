@@ -172,7 +172,7 @@ class JCNBot:
                     
                 # Generate response
                 response = await self.openai_client.chat.completions.create(
-                    model="gpt-4",
+                    model="gpt-4o-mini",
                     messages=[
                         {"role": "system", "content": self.read_context_file()},
                         {"role": "system", "content": "You are in a group chat. Keep responses concise and natural."},
@@ -322,7 +322,7 @@ class JCNBot:
             ]
             
             response = await self.openai_client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-4o-mini",
                 messages=messages,
                 functions=self.get_function_definitions(),
                 function_call="auto",
@@ -349,7 +349,7 @@ class JCNBot:
         try:
             # Generate response using AI
             response = await self.openai_client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": self.read_context_file()},
                     {"role": "user", "content": query}
